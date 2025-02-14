@@ -10,7 +10,7 @@ By using any of the resources and instructions provided, all risks and responsib
 It is recommended to save and backup your existing configuration and working firmware before proceeding any further.**
 
 Specific firmware version (EW_3.0(1)B11P219_EW1200GI_10182113) is required for a command injection vulnerability using http post on /cgi-bin/luci/api/cmd via the remoteIp field.
-The working firmware for this is attached.
+The working firmware for this is as attached.
 [RG-EW1200G PRO Wireless Routers EW_3.0(1)B11P219 firmware.zip](https://github.com/user-attachments/files/18793087/RG-EW1200G.PRO.Wireless.Routers.EW_3.0.1.B11P219.firmware.zip)
 
 Step by step instructions:
@@ -47,3 +47,8 @@ Step by step instructions:
     ![image](https://github.com/user-attachments/assets/1c96ac98-a5be-4d12-a167-648be028b629)
 15. Type 'pwd' then enter, followed by 'ls' to list the exposed folders and lastly 'id' to check for root access
 16. If the rootshell process is done correctly, the response should be similar to the above image
+
+Extra Notes:
+1. Make sure port 6666 is open on all firewalls on your network
+2. This should work on linux as well using 'nc -lvvp 6666' but it didn't work for my case on both Proxmox and Ubuntu and currently the reasons are unknown
+3. If the upgrade feature to install the specific firmware doesn't work, try resetting the router and try again
