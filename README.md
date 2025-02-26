@@ -1,19 +1,21 @@
 Instructions to gain rootshell on Ruijie RG-EW1200G PRO v1.1 routers for openwrt installation
 
-Source:  
+<h1>Source:</h1>  
+   
 https://gist.github.com/ZIKH26/18693c67ee7d2f8d2c60231b19194c37  
-https://bbs.kanxue.com/thread-280448.htm
+https://bbs.kanxue.com/thread-280448.htm  
 
 **Disclaimer: Proceeding with these instructions using the firmware provided may cause your Ruijie RG-EW1200G PRO v1.1 router to brick.
 Please read through carefully and exercise extreme caution.
 By using any of the resources and instructions provided, all risks and responsibilities will be solely on the user.
 It is recommended to save and backup your existing configuration and working firmware before proceeding any further.**
 
-Specific firmware version (EW_3.0(1)B11P219_EW1200GI_10182113) is required for a command injection vulnerability using http post on /cgi-bin/luci/api/cmd via the remoteIp field.
+Specific firmware version (EW_3.0(1)B11P219_EW1200GI_10182113) is required for a command injection vulnerability using http post on /cgi-bin/luci/api/cmd via the remoteIp field.  
 The working firmware for this is as attached.
 [RG-EW1200G PRO Wireless Routers EW_3.0(1)B11P219 firmware.zip](https://github.com/user-attachments/files/18793087/RG-EW1200G.PRO.Wireless.Routers.EW_3.0.1.B11P219.firmware.zip)
 
-Step by step instructions:
+<h1>Step by step instructions:</h1>  
+
 1. Make sure the working firmware (EW_3.0(1)B11P219_EW1200GI_10182113) is installed on your Ruijie RG-EW1200G PRO v1.1 router before proceeding. Just login to the router's UI on a web browser and use the upgrade function.
 2. Install Mozilla Firefox and HackBar extension https://addons.mozilla.org/en-US/firefox/addon/hackbar/
 3. Download nc64.exe from https://github.com/int0x33/nc.exe/
@@ -48,7 +50,8 @@ Step by step instructions:
 15. Type 'pwd' then enter, followed by 'ls' to list the exposed folders and lastly 'id' to check for root access
 16. If the rootshell process is done correctly, the response should be similar to the above image
 
-Extra Notes:
+<h1>Extra Notes:</h1>  
+
 1. Make sure port 6666 is open on all firewalls on your network
 2. This should work on linux as well using 'nc -lvvp 6666' but it didn't work for my case on both Proxmox and Ubuntu and currently the reasons are unknown
 3. If the upgrade feature to install the specific firmware doesn't work, try resetting the router and try again
