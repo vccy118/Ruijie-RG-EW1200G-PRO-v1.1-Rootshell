@@ -22,7 +22,7 @@ The working firmware for this is as attached.
 4. Place nc64.exe at an easy to access drive or folder, for example drive D
 5. Open windows powershell, navigate to drive D with command 'cd D:'  
    ![image](https://github.com/user-attachments/assets/3e6156c5-4661-4561-bb79-39dda7f195c9)
-6. Start netcat lookup on port 666 with command '.\nc64.exe -lvvp 6666'
+6. Start netcat lookup on port 6666 with command '.\nc64.exe -lvvp 6666'
 7. Go to your Ruijie RG-EW1200G PRO v1.1 router UI page by typing in the router IP on Mozilla Firefox
 8. Login and open up the developer console (F12) and select the network tab  
    ![image](https://github.com/user-attachments/assets/5501998d-ffee-418f-a2a6-a0f40761c369)
